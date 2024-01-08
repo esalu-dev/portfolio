@@ -1,0 +1,58 @@
+---
+import GitHubIcon from '../components/GitHubIcon.astro';
+import HireBadge from '../components/HireBadge.astro';
+import LinkChip from '../components/LinkChip.astro';
+import LinkedInIcon from '../components/LinkedInIcon.astro';
+import SpotifyIcon from '../components/SpotifyIcon.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../sections/Header.astro';
+import Timeline from '../sections/Timeline.astro';
+import ClockIcon from '../components/ClockIcon.astro';
+import PencilIcon from '../components/PencilIcon.astro';
+import Projects from '../sections/Projects.astro';
+import MusicIcon from '../components/MusicIcon.astro';
+import Songs from '../sections/Songs.astro';
+import Footer from '../sections/Footer.astro';
+---
+
+<Layout title="Esalu Portfolio - Web developer and music composer" desc="Esalu is a web developer and music composer from Mexico. He is passionate about creating beautiful and harmonious things.">
+	<div style="background-color: #0e1212;
+	opacity: 1;
+	background-image:  radial-gradient(#3B4B4B 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#3B4B4B 0.8500000000000001px, #0e1212 0.8500000000000001px);
+	background-size: 34px 34px;
+	background-position: 0 0,17px 17px;">
+		<main class="px-[300px] py-8">
+			<Header/>
+			<section class="py-32 px-32">
+				<div class="flex gap-2 items-center pb-4">
+					<h1 class="text-4xl font-bold">Hello, I'm <span class="text-esalu-green-400">Esalu</span></h1>
+					<HireBadge>Available for hire</HireBadge>
+				</div>
+				<p class="text-lg text-balance">Passionate <b class="text-esalu-green-100">front-end developer</b> and harmonious <i class="text-woodsmoke-100">music composer</i> hailing from <span class="text-green-500">Mé</span>xi<span class="text-red-500">co</span>.</p>
+				<div class="mt-5">
+					<LinkChip link='https://github.com/esalu-dev'><GitHubIcon/></LinkChip>
+					<LinkChip link='https://github.com/esalu-dev'><LinkedInIcon/></LinkChip>
+					<LinkChip link='https://github.com/esalu-dev'><SpotifyIcon/></LinkChip>
+				</div>
+			</section>
+			<section id="experience" class="pt-4 pb-28 px-32">
+				<h2 class="text-2xl mb-5 font-semibold flex items-center gap-2"><ClockIcon/>Experience</h2>
+				<Timeline/>
+
+			</section>
+			<section id="projects" class="pt-4 pb-32 px-32">
+				<h2 class="text-2xl mb-5 font-semibold flex items-center gap-2"><PencilIcon/>Projects</h2>
+				<Projects/>
+			</section>
+			<section id="music" class="pt-4 pb-32 pl-32 h-[650px]">
+				<div class="absolute bg-woodsmoke-dark left-0 w-full px-[428px] py-10">
+					<h2 class="text-2xl mb-5 font-semibold flex items-center gap-2 font-Onest tracking-wider"><MusicIcon/>Music</h2>
+					<Songs/>
+				</div>
+			</section>
+			<Footer/>
+		</main>
+	</div>
+	
+</Layout>
+

@@ -1,0 +1,58 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        SpaceMono: ["Space Mono", "monospace"],
+        Onest: ["Onest", "sans-serif"],
+      },
+      colors: {
+        "woodsmoke-dark": {
+          DEFAULT: "#020303",
+          50: "#536A6A",
+          100: "#4A5F5F",
+          200: "#384848",
+          300: "#263131",
+          400: "#141A1A",
+          500: "#020303",
+          600: "#000000",
+          700: "#000000",
+          800: "#000000",
+          900: "#000000",
+          950: "#000000",
+        },
+        woodsmoke: {
+          DEFAULT: "#0E1212",
+          50: "#C1CFCF",
+          100: "#B5C6C6",
+          200: "#9EB4B4",
+          300: "#87A2A2",
+          400: "#709090",
+          500: "#5E7979",
+          600: "#4C6262",
+          700: "#3B4B4B",
+          800: "#293434",
+          900: "#171D1D",
+          950: "#0E1212",
+        },
+        "esalu-green": {
+          DEFAULT: "#3F911A",
+          50: "#C8F2B5",
+          100: "#B0E798",
+          200: "#9BDD7E",
+          300: "#80C95E",
+          400: "#5CAA39",
+          500: "#3F911A",
+          600: "#347715",
+          700: "#285D10",
+          800: "#1D430C",
+          900: "#122907",
+          950: "#0C1C05",
+        },
+      },
+    },
+  },
+  darkMode: "class",
+  plugins: [],
+};

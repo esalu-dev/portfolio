@@ -1,0 +1,27 @@
+---
+import TimelineItem from './TimelineItem.astro'
+const EXPERIENCE = [
+   {
+      date: 'August 2022 - Present',
+      title: 'Systems Engineering',
+      description: 'I am currently studying Systems Engineering at the Instituto Tecnológico de Durango (ITD) in the city of Durango, Dgo., Mexico.',
+      link: '#',
+   },
+   {
+      date: 'August 2019 - July 2022',
+      title: 'Programming Technician',
+      description: 'I studied programming at the Centro de Bachillerato Tecnológico Industrial y de Servicios No. 89 (CBTis 89) in the city of Durango, Dgo., Mexico.',
+   },
+   
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+   {
+      EXPERIENCE.map((item, index) => (
+         <TimelineItem title={item.title} description={item.description} date={item.date}/>
+      ))
+   }
+   
+</ol>
+

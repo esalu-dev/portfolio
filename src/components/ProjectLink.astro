@@ -1,0 +1,13 @@
+---
+import CodeIcon from "./CodeIcon.astro";
+import GitHubIcon from "./GitHubIcon.astro";
+
+const { link, github } = Astro.props
+---
+
+<a href={link} target="_blank" rel="noopener" class="text-woodsmoke font-Onest font-semibold bg-gray-200 hover:bg-gray-400 active:bg-gray-600 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 inline-flex items-center gap-2">
+   {
+      github ? <GitHubIcon color="#000000" /> : <CodeIcon/>
+   }
+   <slot/>
+</a>

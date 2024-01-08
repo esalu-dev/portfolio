@@ -1,0 +1,89 @@
+---
+import ProjectLink from "../components/ProjectLink.astro";
+import TagBadge from '../components/TagBadge.astro'
+const PROJECTS = [
+   {
+      name: 'URL Shortener',
+      description: 'URL Shortener is a web application that allows users to enter a long URL and get a shortened URL in return. The shortened URL redirects to the original URL.',
+      image: 'projects/urlshortener.webp',
+      url: 'https://url-shortener-app-c7tq.onrender.com/',
+      github: 'https://github.com/esalu-dev/url-shortener-react',
+      tags: [
+         {
+            name: 'React',
+            class: 'bg-blue-500 border-blue-500 text-blue-100',
+         },
+         {
+            name: 'Tailwind CSS',
+            class: 'bg-cyan-500 border-cyan-500 text-cyan-100',
+         },
+         {
+            name: 'Bitly API',
+            class: 'bg-purple-500 border-purple-500 text-purple-100',
+         }
+      ]
+   },
+   {
+      name: 'MiniMentes',
+      description: 'MiniMentes is a mobile application focused on helping children to learn and develop mathematical and language skills.',
+      image: 'projects/minimentes.webp',
+      github: 'https://github.com/esalu-dev/url-shortener-react',
+      tags: [
+         {
+            name: 'Flutter',
+            class: 'bg-blue-500 border-blue-500 text-blue-100',
+         },
+         {
+            name: 'Dart',
+            class: 'bg-cyan-500 border-cyan-500 text-cyan-100',
+         },
+         
+      ]
+   },
+   {
+      name: 'Resistance Calculator',
+      description: 'Resistance Calculator is a mobile application that allows users to calculate the resistance of a resistor based on the color bands.',
+      image: 'projects/cal_resistencia.webp',
+      github: 'https://github.com/esalu-dev',
+      tags: [
+         {
+            name: 'Flutter',
+            class: 'bg-blue-500 border-blue-500 text-blue-100',
+         },
+         {
+            name: 'Dart',
+            class: 'bg-cyan-500 border-cyan-500 text-cyan-100',
+         },
+         
+      ]
+   }
+]
+---
+
+<div>
+   {
+      PROJECTS.map(project => (
+         <article class="py-3">
+            <img src={ project.image } alt={ project.name } class="rounded-lg"/>
+            <div class="flex items-center justify-between">
+               <h3 class="text-xl text-esalu-green-200 font-bold py-3">{ project.name }</h3>
+               <div>
+                  {
+                     project.tags.map(tag => (
+                        <TagBadge class={tag.class}>{tag.name}</TagBadge>
+                     ))
+                  }   
+               </div>
+            </div>
+            <p class="font-Onest text-woodsmoke-100 text-sm text-pretty mb-5">{ project.description }</p>
+            {
+               project.url && (
+                  <ProjectLink link={project.url}>View</ProjectLink>
+               
+               )
+            }
+            <ProjectLink link={project.github} github={true}>GitHub</ProjectLink>
+         </article>
+      ))
+   }
+</div>
