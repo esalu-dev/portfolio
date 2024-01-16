@@ -2,6 +2,7 @@
 import '@fontsource/space-mono'
 import '@fontsource/space-mono/700.css'
 import '@fontsource/onest'
+import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
 	title: string;
@@ -20,6 +21,7 @@ const { title, desc } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions/>
 	</head>
 	<body>
 		<slot />
