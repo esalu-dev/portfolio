@@ -21,7 +21,8 @@ import Footer from '../sections/Footer.astro';
 	background-image:  radial-gradient(#3B4B4B 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#3B4B4B 0.8500000000000001px, #0e1212 0.8500000000000001px);
 	background-size: 34px 34px;
 	background-position: 0 0,17px 17px;">
-		<main class="px-[300px] py-8">
+	<div class="flex flex-col items-center">
+		<main class="py-8 max-w-[900px]">
 			<Header/>
 			<section class="py-32 px-32">
 				<div class="flex gap-2 items-center pb-4">
@@ -36,22 +37,31 @@ import Footer from '../sections/Footer.astro';
 				</div>
 			</section>
 			<section id="experience" class="pt-4 pb-28 px-32">
-				<h2 class="text-2xl mb-5 font-semibold flex items-center gap-2"><ClockIcon/>Experience</h2>
+				<h2 class="text-2xl mb-2 font-semibold flex items-center gap-2"><ClockIcon/>Experience</h2>
+				<p class="mb-5 text-woodsmoke-100 font-Onest">Diverse Projects, One Passion</p>
 				<Timeline/>
 
 			</section>
 			<section id="projects" class="pt-4 pb-32 px-32">
-				<h2 class="text-2xl mb-5 font-semibold flex items-center gap-2"><PencilIcon/>Projects</h2>
+				<h2 class="text-2xl mb-2 font-semibold flex items-center gap-2"><PencilIcon/>Projects</h2>
+				<p class="mb-5 text-woodsmoke-100 font-Onest">From Concept to Code</p>
+
 				<Projects/>
 			</section>
-			<section id="music" class="pt-4 pb-32 pl-32 h-[650px]">
-				<div class="absolute bg-woodsmoke-dark left-0 w-full px-[428px] py-10">
-					<h2 class="text-2xl mb-5 font-semibold flex items-center gap-2 font-Onest tracking-wider"><MusicIcon/>Music</h2>
+			<section id="music" class="pt-4 pb-32 px-32  rounded-xl">
+				<div class="bg-woodsmoke-dark-500 p-10 rounded-xl">
+					<h2 class="text-2xl mb-2 font-s emibold flex items-center gap-2 font-Onest tracking-wider"><MusicIcon/>My Music</h2>
+					<p class="mb-5 text-woodsmoke-100 font-Onest">Melodies from the Heart <3</p>
+
 					<Songs/>
+
 				</div>
+			
 			</section>
 			<Footer/>
 		</main>
+	</div>
+	
 	</div>
 	
 </Layout>
