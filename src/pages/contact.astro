@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Esalu Portfolio - Web developer and music composer" desc="Esalu is a web developer and music composer from Mexico. He is passionate about creating beautiful and harmonious things.">
+   <div style="background-color: #0e1212;
+	opacity: 1;
+	background-image:  radial-gradient(#3B4B4B 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#3B4B4B 0.8500000000000001px, #0e1212 0.8500000000000001px);
+	background-size: 34px 34px;
+	background-position: 0 0,17px 17px;">
+
+   
+   <section class="flex justify-center items-center h-dvh w-full">
+      <form class="w-[400px] dark">
+         <h2 class="font-Onest font-bold text-xl my-8 w-72">Let's make something great together =D</h2>
+         <div class="mb-5">
+            <label for="email" class="block mb-2 text-sm font-medium text-white">Your name:</label>
+            <input type="text" id="email" class="font-Onest bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Freddy Mercury" required>
+          </div>
+         <div class="mb-5">
+           <label for="email" class="block mb-2 text-sm font-medium text-white">Your email:</label>
+           <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 font-Onest" placeholder="youremail@esalu.site" required>
+         </div>
+         <div class="mb-5">
+            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message:</label>
+            <textarea id="message" rows="4" class="resize-none block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 font-Onest" placeholder="Write your idea here..."></textarea>
+         </div>
+         
+         <a href="/success" class=" text-white bg-esalu-green-600 hover:bg-esalu-green-900 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full block mb-4 sm:inline-block sm:w-auto px-5 py-2.5 text-center font-Onest">Submit</a>
+         <a href="/" class=" text-white bg-woodsmoke-700 hover:bg-woodsmoke-900 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full block sm:inline-block sm:w-auto px-5 py-2.5 text-center font-Onest">Cancel</a>
+       </form>
+   </section>
+   </div>
+
+
+ 
+</Layout>
