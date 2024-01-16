@@ -3,6 +3,7 @@ import '@fontsource/space-mono'
 import '@fontsource/space-mono/700.css'
 import '@fontsource/onest'
 import { ViewTransitions } from 'astro:transitions'
+import SEO from '../seo/SEO.astro'
 
 interface Props {
 	title: string;
@@ -19,6 +20,7 @@ const { title, desc } = Astro.props;
 		<meta name="description" content={desc} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<SEO/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions/>
