@@ -24,10 +24,10 @@ import Footer from '../sections/Footer.astro';
 	<div class="flex flex-col items-center">
 		<main class="py-8 max-w-[900px]">
 			<Header/>
-			<section class="py-32 px-32">
-				<div class="flex gap-2 items-center pb-4">
-					<h1 class="text-4xl font-bold">Hello, I'm <span class="text-esalu-green-400">Esalu</span></h1>
+			<section class="py-32 md:px-32 px-10">
+				<div class="md:inline-flex gap-2 items-center pb-4 flex-row-reverse">
 					<HireBadge>Available for hire</HireBadge>
+					<h1 class="text-4xl font-bold mt-2">Hello, I'm <span class="text-esalu-green-400">Esalu</span></h1>
 				</div>
 				<p class="text-lg text-balance">Passionate <b class="text-esalu-green-100">front-end developer</b> and harmonious <i class="text-woodsmoke-100">music composer</i> hailing from <span class="text-green-500">Mé</span>xi<span class="text-red-500">co</span>.</p>
 				<div class="mt-5">
@@ -36,21 +36,21 @@ import Footer from '../sections/Footer.astro';
 					<LinkChip link='https://github.com/esalu-dev'><SpotifyIcon/></LinkChip>
 				</div>
 			</section>
-			<section id="experience" class="pt-4 pb-28 px-32">
+			<section id="experience" class="pt-4 pb-28 md:px-32 px-10">
 				<h2 class="text-2xl mb-2 font-semibold flex items-center gap-2"><ClockIcon/>Experience</h2>
 				<p class="mb-5 text-woodsmoke-100 font-Onest">Diverse Projects, One Passion</p>
 				<Timeline/>
 
 			</section>
-			<section id="projects" class="pt-4 pb-32 px-32">
+			<section id="projects" class="pt-4 pb-32 md:px-32 px-10">
 				<h2 class="text-2xl mb-2 font-semibold flex items-center gap-2"><PencilIcon/>Projects</h2>
 				<p class="mb-5 text-woodsmoke-100 font-Onest">From Concept to Code</p>
 
 				<Projects/>
 			</section>
-			<section id="music" class="pt-4 pb-32 px-32  rounded-xl">
-				<div class="bg-woodsmoke-dark-500 p-10 rounded-xl">
-					<h2 class="text-2xl mb-2 font-s emibold flex items-center gap-2 font-Onest tracking-wider"><MusicIcon/>My Music</h2>
+			<section id="music" class="pt-4 pb-32 md:px-32 ">
+				<div class="bg-woodsmoke-dark-500 p-10 md:rounded-xl">
+					<h2 class="text-2xl mb-2 font-semibold flex items-center gap-2 font-Onest"><MusicIcon/>My Music</h2>
 					<p class="mb-5 text-woodsmoke-100 font-Onest">Melodies from the Heart <3</p>
 
 					<Songs/>
