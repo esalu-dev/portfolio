@@ -66,8 +66,8 @@ const PROJECTS = [
          <article class="py-3">
             <img src={ project.image } alt={ project.name } class="rounded-lg"/>
             <div class="flex items-center justify-between">
-               <h3 class="text-xl text-esalu-green-200 font-bold py-3">{ project.name }</h3>
-               <div>
+               <h3 class="sm:text-xl text-lg text-esalu-green-200 font-bold py-3">{ project.name }</h3>
+               <div class="flex flex-wrap justify-end">
                   {
                      project.tags.map(tag => (
                         <TagBadge class={tag.class}>{tag.name}</TagBadge>
