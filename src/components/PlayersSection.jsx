@@ -11,7 +11,7 @@ export function PlayersSection() {
     },
     {
       title: "Ella",
-      url: "https://open.spotify.com/intl-es/track/1f59Vp78SZ7RDHn9FvbzYV?si=c6b0e19646ef4210",
+      url: "https://open.spotify.com/intl-es/track/0lZxLHtzuYUs7PdBWSJi9A?si=8d367932f44e45fa",
       img: "songs/travesia.webp",
       file: "songs/ella.ogg",
     },
