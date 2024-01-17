@@ -50,11 +50,14 @@ export function Player({ title, url, img, file, isPlaying, onPlay }) {
     <article className="flex gap-4">
       <img src={img} alt={title} className="size-32" />
       <div className="w-full">
-        <h2 className="font-Onest text-xl font-bold tracking-wide flex items-center gap-2">
+        <h2 className="hidden font-Onest text-xl font-bold tracking-wide sm:flex items-center gap-2">
           {title} {previewBadge}
         </h2>
+        <h2 className="sm:hidden font-Onest text-lg font-bold tracking-wide flex items-center gap-2">
+          {title} {previewBadgeMobile}
+        </h2>
         <div className="flex justify-between">
-          <h4 className="font-Onest">Esalu</h4>
+          <h4 className="font-Onest text-sm sm:text-md">Esalu</h4>
           <p className="font-Onest text-xs">{formatTime(duration)}</p>
         </div>
         <div>
@@ -104,7 +107,7 @@ export function Player({ title, url, img, file, isPlaying, onPlay }) {
 const playerIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="icon icon-tabler icon-tabler-player-play-filled"
+    className="icon icon-tabler icon-tabler-player-play-filled"
     width="24"
     height="24"
     viewBox="0 0 24 24"
@@ -126,7 +129,7 @@ const playerIcon = (
 const urlIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="icon icon-tabler icon-tabler-link"
+    className="icon icon-tabler icon-tabler-link"
     width="24"
     height="24"
     viewBox="0 0 24 24"
@@ -146,7 +149,7 @@ const urlIcon = (
 const pauseIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="icon icon-tabler icon-tabler-player-pause-filled"
+    className="icon icon-tabler icon-tabler-player-pause-filled"
     width="24"
     height="24"
     viewBox="0 0 24 24"
@@ -171,15 +174,21 @@ const pauseIcon = (
 );
 
 const previewBadge = (
-  <span class="h-5 flex items-center border-gray-200 bg-gray-200 bg-opacity-30 border-2 font-Onest text-gray-200 text-[10px] font-medium me-2 px-1 py-0.5 rounded ">
+  <span className="h-5 flex items-center border-gray-200 bg-gray-200 bg-opacity-30 border-2 font-Onest text-gray-200 text-[10px]  font-medium me-2 px-1 py-0.5 rounded ">
     Preview
+  </span>
+);
+
+const previewBadgeMobile = (
+  <span className="h-5 flex items-center border-gray-200 bg-gray-200 bg-opacity-30 border-2 font-Onest text-gray-200 text-[10px]  font-medium me-2 px-1 py-0.5 rounded ">
+    P
   </span>
 );
 
 const stopIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="icon icon-tabler icon-tabler-player-stop-filled"
+    className="icon icon-tabler icon-tabler-player-stop-filled"
     width="24"
     height="24"
     viewBox="0 0 24 24"
