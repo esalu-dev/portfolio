@@ -1,7 +1,11 @@
-<header class="flex justify-between items-center">
+---
+import HeaderIcon from "../components/HeaderIcon.astro";
+---
+
+<header class="flex justify-between items-center mx-10">
    
    <img src="avatar.webp" alt="esalu photo" class="rounded-full size-10">
-   <nav>
+   <nav class="hidden sm:block">
       <ul class="flex gap-6 text-sm">
          <li><a href="#">Home</a></li>
          <li><a href="#experience">Experience</a></li>
@@ -10,4 +14,7 @@
          <li><a href="/contact">Contact</a></li>
       </ul>
    </nav>
+   <div class="sm:hidden">
+      <button><HeaderIcon/></button>
+   </div>
 </header>
