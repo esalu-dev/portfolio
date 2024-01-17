@@ -90,6 +90,8 @@ export function Player({ title, url, img, file, isPlaying, onPlay }) {
 
           <a
             href={url}
+            target="_blank"
+            rel="noreferrer"
             className="bg-green-500 size-10 rounded-full flex items-center justify-center"
           >
             {urlIcon}
