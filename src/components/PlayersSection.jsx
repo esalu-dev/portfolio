@@ -8,18 +8,21 @@ export function PlayersSection() {
       url: "https://open.spotify.com/intl-es/track/09DNScZKnk1KcIoAOVsNVj?si=ecf1efbfcf8c4ea8",
       img: "songs/travesia.webp",
       file: "songs/aterrizaje.ogg",
+      duration: "00:20",
     },
     {
       title: "Ella",
       url: "https://open.spotify.com/intl-es/track/0lZxLHtzuYUs7PdBWSJi9A?si=8d367932f44e45fa",
       img: "songs/travesia.webp",
       file: "songs/ella.ogg",
+      duration: "00:22",
     },
     {
       title: "Lost Year",
       url: "https://open.spotify.com/intl-es/track/510v9k294X1ud3vOUhBpBM?si=a1ad7e046d1c4acd",
       img: "songs/lostyear.webp",
       file: "songs/lostyear.ogg",
+      duration: "00:18",
     },
   ];
 
@@ -42,6 +45,7 @@ export function PlayersSection() {
           url={song.url}
           img={song.img}
           file={song.file}
+          time={song.duration}
           isPlaying={index === currentPlayingIndex}
           onPlay={() => handlePlay(index)}
         />

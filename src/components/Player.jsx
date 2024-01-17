@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export function Player({ title, url, img, file, isPlaying, onPlay }) {
+export function Player({ title, url, img, file, isPlaying, onPlay, time }) {
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const audioRef = useRef();
@@ -12,7 +12,7 @@ export function Player({ title, url, img, file, isPlaying, onPlay }) {
 
   useEffect(() => {
     setDuration(audioRef.current.duration);
-    audioRef.current.addEventListener("ended", () => onPlay(null)); // Notify PlayersSection that playback has ended
+    audioRef.current.addEventListener("ended", () => onPlay(null));
     audioRef.current.addEventListener("timeupdate", handleDuration);
 
     return () => {
@@ -58,7 +58,7 @@ export function Player({ title, url, img, file, isPlaying, onPlay }) {
         </h2>
         <div className="flex justify-between">
           <h4 className="font-Onest text-sm sm:text-md">Esalu</h4>
-          <p className="font-Onest text-xs">{formatTime(duration)}</p>
+          <p className="font-Onest text-xs">{time}</p>
         </div>
         <div>
           <span className="flex h-1 bg-gray-50 my-3 rounded">
