@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
+import { sendEmail } from "../services/sendEmail";
 
-export function ContactForm() {
+export function ContactForm({ API_KEY }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -51,7 +52,6 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(form);
 
     if (form.name === "") {
       nameInput.current?.classList.add("outline-red-500", "outline");
@@ -79,6 +79,17 @@ export function ContactForm() {
       }));
       showAlert();
       return;
+    }
+
+    const response = sendEmail(form, API_KEY);
+    if (response) {
+      window.location.href = "/success";
+    } else {
+      setAlertInfo((prevState) => ({
+        ...prevState,
+        message: " Something went wrong, please try again later",
+      }));
+      showAlert();
     }
   };
 

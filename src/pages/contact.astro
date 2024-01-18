@@ -1,6 +1,7 @@
 ---
 import { ContactForm } from "../components/ContactForm";
 import Layout from "../layouts/Layout.astro";
+const API_KEY = import.meta.env.API_KEY;
 ---
 
 <Layout title="Esalu Portfolio - Web developer and music composer" desc="Esalu is a web developer and music composer from Mexico. He is passionate about creating beautiful and harmonious things.">
@@ -10,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
 	background-size: 34px 34px;
 	background-position: 0 0,17px 17px;">
 
-   <ContactForm client:visible/>
+   <ContactForm API_KEY={API_KEY} client:visible/>
    
    </div>
 
