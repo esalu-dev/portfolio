@@ -82,15 +82,17 @@ export function ContactForm({ API_KEY }) {
     }
 
     const response = sendEmail(form, API_KEY);
-    if (response) {
-      window.location.href = "/success";
-    } else {
-      setAlertInfo((prevState) => ({
-        ...prevState,
-        message: " Something went wrong, please try again later",
-      }));
-      showAlert();
-    }
+    response.then((res) => {
+      if (res) {
+        window.location.href = "/success";
+      } else {
+        setAlertInfo((prevState) => ({
+          ...prevState,
+          message: " Something went wrong, please try again later",
+        }));
+        showAlert();
+      }
+    });
   };
 
   return (
