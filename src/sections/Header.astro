@@ -1,5 +1,6 @@
 ---
 import HeaderIcon from "../components/HeaderIcon.astro";
+
 ---
 
 <header class="flex justify-between items-center mx-10">
@@ -13,7 +14,45 @@ import HeaderIcon from "../components/HeaderIcon.astro";
          <li><a href="/contact" class="hover:underline font-semibold">Contact</a></li>
       </ul>
    </nav>
+   <nav class="sm:hidden hidden fixed right-0 top-0 h-screen w-screen z-50 bg-woodsmoke-dark-500 bg-opacity-50" id="navBar">
+      <ul class="flex flex-col items-center w-full backdrop-blur-md h-full justify-center gap-16 text-sm">
+         <li><a href="#experience" class="hover:underline text-lg">Experience</a></li>
+         <li><a href="#projects" class="hover:underline text-lg">Projects</a></li>
+         <li><a href="#music" class="font-Onest italic tracking-wide hover:underline text-lg">Music</a></li>
+         <li><a href="/contact" class="hover:underline font-semibold text-lg">Contact</a></li>
+      </ul>
+      <button id="btnCloseNavbar" class="absolute top-5 right-6 p-4"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></button>
+
+   </nav>
    <div class="sm:hidden">
-      <button><HeaderIcon/></button>
+      <button id="btnOpenNav"><HeaderIcon/></button>
    </div>
 </header>
+
+<script>
+
+   const navBar = document.getElementById('navBar');
+   const btnOpenNav = document.getElementById('btnOpenNav');
+   const btnCloseNavbar = document.getElementById('btnCloseNavbar');
+
+btnOpenNav.addEventListener('click', () => {
+   navBar.classList.remove('hidden');
+   navBar.classList.add('flex');
+});
+
+btnCloseNavbar.addEventListener('click', () => {
+   navBar.classList.remove('flex');
+   navBar.classList.add('hidden');
+});
+
+navBar.childNodes.forEach((child) => {
+   child.childNodes.forEach((child) => {
+      child.addEventListener('click', () => {
+         navBar.classList.remove('flex');
+         navBar.classList.add('hidden');
+      });
+   });
+});
+
+
+</script>
